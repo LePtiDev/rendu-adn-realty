@@ -1,6 +1,6 @@
 # Rendu-adn-realty
 
-lien du site : 
+lien du site : https://leptidev.github.io/rendu-adn-realty/.
 
 Pour ce test d'intégration j'ai décidé de partir sur du from scratch avec du scss et sans bootstrap.
 
