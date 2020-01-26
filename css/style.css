@@ -1,0 +1,917 @@
+.bouton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  height: 60px;
+  width: 247px;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  transition-duration: 500ms;
+}
+
+.bouton:hover {
+  transition-duration: 500ms;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.41);
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  border: solid 3px #778499;
+  background-color: none;
+  height: 15px;
+  width: 15px;
+}
+
+input[type=radio]:checked {
+  background-image: url("../img/check.svg");
+  background-size: contain;
+  background-position: center center;
+  border: solid 3px #2a3472;
+}
+
+input[type=text] {
+  background-color: none;
+  height: 58px;
+  width: 100%;
+  border: 2px solid #abb7cc;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+}
+
+header {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.imgHeader {
+  width: 100%;
+  background-color: red;
+  background-image: url("../img/perspective.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 700px;
+  z-index: 0;
+}
+
+.lotBouton {
+  position: absolute;
+  top: 30px;
+  left: 63%;
+  width: 514px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.rappeler {
+  background-color: #03dac5;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telephone {
+  background-color: #2a3472;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../img/telephone.svg");
+  background-size: 10%;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+.telephone .numero {
+  font-size: 24px;
+}
+.telephone .appel {
+  font-size: 11px;
+}
+
+.boiteTitre {
+  position: absolute;
+  top: 70%;
+  left: 100px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  justify-content: space-around;
+}
+.boiteTitre .titre {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #2a3472;
+  font-weight: 800;
+  font-size: 47px;
+  width: auto;
+}
+.boiteTitre .titreH1 {
+  padding: 5px 40px 5px 20px;
+}
+.boiteTitre .titreH2 {
+  padding: 5px 70px 5px 20px;
+}
+
+.rondTransparent {
+  height: 84px;
+  width: 84px;
+  border-radius: 42px;
+  background-color: #2a347233;
+  position: absolute;
+  top: 92%;
+  left: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rondTransparent .rond {
+  height: 55px;
+  width: 55px;
+  border-radius: 40px;
+  background-color: #2a3472;
+  background-image: url("../img/enveloppe.svg");
+  background-position: center center;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  transition-duration: 500ms;
+}
+.rondTransparent .rond:hover {
+  height: 75px;
+  width: 75px;
+  transition-duration: 500ms;
+}
+
+.milieu {
+  height: 296px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  font-size: 34px;
+  padding-top: 50px;
+}
+
+.titreMilieu {
+  color: #2a3472;
+}
+
+.sousTitreMilieu {
+  color: #ffffff;
+  background-color: #03dac5;
+  padding: 5px 20px 5px 20px;
+}
+
+.container {
+  width: 100vw;
+  height: 817px;
+  background-color: #03dac5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerForm {
+  height: 929px;
+  width: 656px;
+  border-radius: 0 0 0 40px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.41);
+  padding: 55px;
+  position: relative;
+}
+.containerForm h4 {
+  font-size: 34px;
+  color: #2a3472;
+  height: 15%;
+}
+
+form {
+  height: 85%;
+  width: 100%;
+  color: #778499;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form .infoInput {
+  width: 100%;
+  padding: 10px 0px 10px 20px;
+}
+form input, form textarea {
+  font-size: 18px;
+  resize: none;
+  border: 2px solid #abb7cc;
+}
+form input[type=email], form input[type=text], form textarea {
+  padding: 20px;
+}
+
+#red {
+  border: 2px solid #ff0303;
+}
+
+#blue {
+  border: 2px solid #2a3472;
+}
+
+.checkbox {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.checkbox p {
+  margin-left: 10px;
+}
+
+.ligneChekbox {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+  padding-left: 20px;
+}
+
+.marginBoth {
+  margin-top: 18px;
+}
+
+.containerInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstInput, .secondInput {
+  width: 49%;
+}
+
+textarea {
+  width: 100%;
+  height: 128px;
+}
+
+.condition {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+  margin-top: 16px;
+}
+.condition input {
+  width: 16px;
+  height: 16px;
+  border: solid 2px #2a3472;
+  margin-top: 3px;
+}
+.condition p {
+  width: 95%;
+  margin-left: 15px;
+  font-size: 11px;
+  color: #2a3472;
+  font-weight: 500;
+}
+.condition p a {
+  color: #2a3472;
+  text-decoration: underline;
+}
+
+.submit {
+  background-color: #2a3472;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: left;
+  padding: 0 0 0 30px;
+  background-image: url("../img/fleche.svg");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 180px center;
+  margin-top: 30px;
+  margin-left: 299px;
+  transition-duration: 500ms;
+}
+
+.submit:hover {
+  transition-duration: 500ms;
+  background-position: 200px center;
+}
+
+.champs {
+  position: absolute;
+  bottom: 22px;
+  left: 75px;
+  font-size: 10px;
+}
+
+.containerAcces {
+  width: 754px;
+  height: 100%;
+  padding: 95px 0 0 134px;
+}
+
+.rendezVous {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 125px 0;
+}
+
+.localisation img {
+  width: 38px;
+}
+.localisation h4 {
+  font-size: 22px;
+  color: #2a3472;
+}
+
+.aDecouvir {
+  margin-right: 70px;
+}
+
+.tel {
+  background-color: #2a3472;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../img/telephone.svg");
+  background-size: 10%;
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  height: 60px;
+  width: 247px;
+}
+.tel .numero {
+  font-size: 24px;
+}
+.tel .appel {
+  font-size: 11px;
+}
+
+.decouvrir {
+  width: 472px;
+  background-color: #2a3472;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 48px;
+  margin-bottom: 104px;
+}
+.decouvrir img {
+  width: 27px;
+}
+
+.acces {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.voiture {
+  width: 45%;
+}
+.voiture img {
+  width: 56px;
+  margin-bottom: 13px;
+}
+.voiture h5 {
+  font-size: 18px;
+  color: #2a3472;
+  margin-bottom: 35px;
+}
+.voiture p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.transport {
+  width: 290px;
+}
+.transport img {
+  width: 38px;
+  margin-bottom: 12px;
+}
+.transport h5 {
+  font-size: 18px;
+  color: #2a3472;
+  margin-bottom: 35px;
+}
+.transport p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+footer {
+  height: 117px;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 425px) {
+  .lotBouton {
+    width: 247px;
+    height: 140px;
+    left: calc((100% - 247px)/2);
+    flex-direction: column;
+  }
+
+  .boiteTitre {
+    width: 100vw;
+    left: 0;
+    align-items: center;
+    margin: 0;
+  }
+  .boiteTitre .titre {
+    font-size: 40px;
+    margin: 0;
+    padding: 5px 20px 5px 20px;
+  }
+
+  .rondTransparent {
+    left: calc((100% - 84px)/2);
+  }
+
+  .milieu {
+    height: auto;
+    justify-content: center;
+  }
+
+  .titreMilieu {
+    text-align: center;
+  }
+
+  .sousTitreMilieu {
+    padding: 25px 20px 5px 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .container {
+    height: auto;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .containerForm {
+    width: 95vw;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .containerInput {
+    flex-direction: column;
+  }
+
+  .firstInput, .secondInput {
+    width: 100%;
+  }
+
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  .submit {
+    margin: 30px 0 30px 0;
+  }
+
+  .containerAcces {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rendezVous {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .localisation {
+    margin: 50px 0px 50px 0px;
+  }
+
+  .aDecouvir {
+    margin: 0;
+  }
+
+  .decouvrir {
+    width: 90vw;
+    font-size: 20px;
+    margin: 0 0 50px 0;
+    padding-left: 20px;
+  }
+
+  .acces {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .voiture, .transport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  .voiture h5, .transport h5 {
+    text-align: center;
+  }
+  .voiture p, .transport p {
+    text-align: center;
+  }
+
+  .transport {
+    margin: 50px 0 50px 0;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .lotBouton {
+    width: 247px;
+    height: 140px;
+    left: calc((100% - 247px)/2);
+    flex-direction: column;
+  }
+
+  .boiteTitre {
+    width: 100vw;
+    left: 0;
+    align-items: center;
+    margin: 0;
+  }
+  .boiteTitre .titre {
+    font-size: 47px;
+    margin: 0;
+    padding: 5px 20px 5px 20px;
+  }
+
+  .rondTransparent {
+    left: calc((100% - 84px)/2);
+  }
+
+  .milieu {
+    height: auto;
+    justify-content: center;
+  }
+
+  .titreMilieu {
+    text-align: center;
+  }
+
+  .sousTitreMilieu {
+    padding: 25px 20px 5px 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .container {
+    height: auto;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .containerForm {
+    width: 95vw;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .containerInput {
+    flex-direction: row;
+  }
+
+  .firstInput, .secondInput {
+    width: 49%;
+  }
+
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  .submit {
+    margin: 30px 0 30px 0;
+  }
+
+  .containerAcces {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rendezVous {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .localisation {
+    margin: 50px 0px 50px 0px;
+  }
+
+  .aDecouvir {
+    margin: 0;
+  }
+
+  .decouvrir {
+    width: 98vw;
+    max-width: 472px;
+    font-size: 20px;
+    margin: 0 0 50px 0;
+    padding-left: 20px;
+  }
+
+  .acces {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .voiture, .transport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .voiture h5, .transport h5 {
+    text-align: center;
+  }
+  .voiture p, .transport p {
+    text-align: center;
+  }
+
+  .transport {
+    margin: 50px 0 50px 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .lotBouton {
+    width: 514px;
+    height: 60px;
+    left: 30%;
+    flex-direction: row;
+  }
+
+  .boiteTitre {
+    width: 100vw;
+    left: 0;
+    align-items: center;
+    margin: 0;
+  }
+  .boiteTitre .titre {
+    font-size: 47px;
+    margin: 0;
+    padding: 5px 20px 5px 20px;
+  }
+
+  .rondTransparent {
+    left: calc((100% - 84px)/2);
+  }
+
+  .milieu {
+    height: auto;
+    justify-content: center;
+  }
+
+  .titreMilieu {
+    text-align: center;
+  }
+
+  .sousTitreMilieu {
+    padding: 0px 20px 5px 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .container {
+    height: auto;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 50px;
+  }
+
+  .containerForm {
+    width: 80vw;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .containerInput {
+    flex-direction: row;
+  }
+
+  .firstInput, .secondInput {
+    width: 49%;
+  }
+
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  .submit {
+    margin: 30px 0 30px 0;
+  }
+
+  .containerAcces {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rendezVous {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .localisation {
+    margin: 50px 0px 50px 0px;
+  }
+
+  .aDecouvir {
+    margin: 0;
+  }
+
+  .decouvrir {
+    width: 472px;
+    font-size: 20px;
+    margin: 0 0 50px 0;
+    padding-left: 20px;
+  }
+
+  .acces {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .voiture, .transport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .voiture h5, .transport h5 {
+    text-align: center;
+  }
+  .voiture p, .transport p {
+    text-align: center;
+  }
+
+  .transport {
+    margin: 50px 0 50px 0;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .lotBouton {
+    width: 514px;
+    height: 60px;
+    left: 50%;
+    flex-direction: row;
+  }
+
+  .container {
+    height: 800px;
+    flex-direction: row;
+    width: 100vw;
+  }
+
+  .containerForm {
+    width: 40vw;
+    height: auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .containerInput {
+    flex-direction: row;
+  }
+
+  .firstInput, .secondInput {
+    width: 49%;
+  }
+
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  .submit {
+    margin: 30px 0 30px 0;
+  }
+
+  .containerAcces {
+    width: 45vw;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rendezVous {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .localisation {
+    margin: 50px 0px 50px 0px;
+  }
+
+  .aDecouvir {
+    margin: 0;
+  }
+
+  .decouvrir {
+    width: 472px;
+    font-size: 20px;
+    margin: 0 0 50px 0;
+    padding-left: 20px;
+  }
+
+  .acces {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .voiture, .transport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .voiture h5, .transport h5 {
+    text-align: center;
+  }
+  .voiture p, .transport p {
+    text-align: center;
+  }
+
+  .transport {
+    margin: 50px 0 50px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

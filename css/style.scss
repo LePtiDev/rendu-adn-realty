@@ -1,0 +1,1233 @@
+
+// Création des variables de couleur et police.
+
+// Police : 
+
+$policeGlobal : "Open Sans", sans-serif;  //--- Importation de la police via un CDN dans l'index.
+
+// Taille d'écriture : 
+
+$titre : 47px;
+$sousTitre : 34px;
+$titreInfoInput : 14px;
+$checkbox : 18px;
+$contenuInput : 18px;
+$contratUtilisation : 11px;
+$submit : 22px;
+$champObligatoire : 10px;
+$renseignement : 22px;
+$decouvrir : 24px;
+$titreAcces : 18px;
+$paragrapheAcces : 14px;
+$bouton : 24px;
+$sousBouton: 11px;
+
+// Couleurs : 
+
+$blanc : #ffffff;
+$bleuFond : #03dac5;
+$bleuPolice : #2a3472;
+$rougeInput : #ff0303;
+$bleuInput : #2a3472;
+$grisInput : #abb7cc;
+$grisCheckbox : #778499;
+$bleuFonceBouton : #2a3472;
+$bleuFonceTransparentBouton : #2a347233;
+$bleuClairBouton : #03dac5;
+
+
+// creation des composants
+
+.bouton{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 60px;
+    width: 247px;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    transition-duration: 500ms;
+}
+
+.bouton:hover{
+    transition-duration: 500ms;
+    box-shadow: 0px 0px 6px 5px rgba(0,0,0,0.41);
+}
+
+
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border: solid 3px $grisCheckbox;
+    background-color: none;
+    height: 15px;
+    width: 15px;
+}
+
+input[type=radio]:checked {
+    background-image: url("../img/check.svg");
+    background-size: contain;
+    background-position: center center;
+    border: solid 3px $bleuInput;
+}
+
+input[type=text] {
+    background-color: none;
+    height: 58px;
+    width: 100%;
+    border: 2px solid $grisInput;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// reset
+
+
+*{
+    font-family: $policeGlobal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    // border: solid red 1px;
+}
+
+
+body{
+    width: 100vw;
+}
+
+// Création du header
+
+
+
+header{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+// Image de fond 
+
+.imgHeader{
+    width: 100%;
+    background-color: red;
+    background-image: url("../img/perspective.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    z-index: 0;
+}
+
+// Création des boutons 
+
+.lotBouton{
+    position: absolute;
+    top: 30px;
+    left: 63%;
+    width: 514px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.rappeler{
+    background-color: $bleuClairBouton;
+    color: $blanc;
+    font-size: $bouton;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telephone{
+    background-color: $bleuFonceBouton;
+    color: $blanc;
+    font-size: $bouton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../img/telephone.svg");  //--- Couleur modifié directement dans le fichier SVG
+    background-size: 10%;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+
+    .numero{
+        font-size: $bouton;
+    }
+
+    .appel{
+        font-size: $sousBouton;
+    }
+}
+
+// Création du titre
+
+.boiteTitre{   
+    position: absolute;
+    top: 70%;
+    left: 100px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    justify-content: space-around;
+
+    .titre{
+    background-color: rgba(255, 255, 255, 0.85);
+    color: $bleuPolice;
+    font-weight: 800; 
+    font-size: $titre;
+    width: auto;
+    }
+
+    .titreH1{
+        padding: 5px 40px 5px 20px;
+    }
+
+    .titreH2{
+        padding: 5px 70px 5px 20px;
+    }
+}
+
+// Création du bouton mail avec animation
+
+.rondTransparent{
+    height: 84px;
+    width: 84px;
+    border-radius: 42px;
+    background-color: $bleuFonceTransparentBouton;
+    position: absolute;
+    top: 92%;
+    left: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .rond{
+        height: 55px;
+        width: 55px;
+        border-radius: 40px;
+        background-color: $bleuFonceBouton;
+        background-image: url("../img/enveloppe.svg");  //--- Couleur modifié directement dans le fichier SVG
+        background-position: center center;
+        background-size: 55%;
+        background-repeat: no-repeat;
+        transition-duration: 500ms;
+    }
+
+    .rond:hover{
+        height: 75px;
+        width: 75px;
+        transition-duration: 500ms;
+    }
+}
+    
+
+
+// Création du la section du milieu
+
+.milieu{
+    height: 296px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-size: $sousTitre;
+    padding-top: 50px;
+}
+
+.titreMilieu{
+    color: $bleuPolice;
+}
+
+.sousTitreMilieu{
+    color: $blanc;
+    background-color: $bleuClairBouton;
+    padding: 5px 20px 5px 20px;
+}
+
+
+
+// Création du container 
+
+.container{
+    width: 100vw;
+    height: 817px;
+    background-color: $bleuFond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// parti gauche avec le formulaire 
+
+
+.containerForm{
+    height: 929px;
+    width: 656px;
+    border-radius: 0 0 0 40px;
+    background-color: $blanc;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.41);
+    padding: 55px;
+    position: relative;
+
+    h4{
+        font-size: $sousTitre;
+        color: $bleuPolice;
+        height: 15%;
+    }
+}
+
+
+// début du fomulaire
+
+form{
+    height: 85%;
+    width: 100%;
+    color: $grisCheckbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    // génralisation du style du fomulaire
+
+
+    .infoInput{
+        width: 100%;
+        padding: 10px 0px 10px 20px;
+    }
+
+    input, textarea{
+        font-size: $contenuInput;
+        resize: none;
+        border: 2px solid $grisInput;
+    }
+
+    input[type=email], input[type=text], textarea{
+        padding: 20px;
+    }
+}
+
+#red{
+    border: 2px solid $rougeInput;
+}
+
+#blue{
+    border: 2px solid $bleuInput;
+}
+
+.checkbox{
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    p{
+        margin-left: 10px;
+    }
+}
+
+// creation des radios
+
+.ligneChekbox{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+    padding-left: 20px;
+}
+
+.marginBoth{
+    margin-top: 18px;
+}
+
+.containerInput{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstInput, .secondInput{
+    width: 49%;
+}
+
+textarea{
+    width: 100%;
+    height: 128px;
+}
+
+// condition d'utilisation 
+
+.condition{
+    display: flex;
+    padding-left: 20px;
+    width: 100%;
+    margin-top: 16px;
+    
+    input{
+        width: 16px;
+        height: 16px;
+        border: solid 2px $bleuPolice;
+        margin-top: 3px;
+    }
+
+    p{
+        width: 95%;
+        margin-left: 15px;
+        font-size: $contratUtilisation;
+        color: $bleuPolice;
+        font-weight: 500;
+        a{
+            color: $bleuPolice;
+            text-decoration: underline;
+        }
+    }
+}
+
+.submit{
+    background-color: $bleuInput;
+    border: none;
+    color: $blanc;
+    font-size: $submit;
+    text-align: left;
+    padding: 0 0 0 30px;
+    background-image: url("../img/fleche.svg"); //--- Couleur modifié directement dans le fichier SVG
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 180px center;
+    margin-top: 30px;
+    margin-left: 299px;
+    transition-duration: 500ms;
+}
+
+.submit:hover{
+    transition-duration: 500ms;
+    background-position: 200px center;
+}
+    
+
+// champs obligatoire
+
+.champs{
+    position: absolute;
+    bottom: 22px;
+    left: 75px;
+    font-size: $champObligatoire;
+}
+
+.containerAcces{
+    width: 754px;
+    height: 100%;
+    padding: 95px 0 0 134px;
+}
+
+.rendezVous{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 0 125px 0;
+}
+
+
+// rendez-vous et renseignement
+.localisation{
+    img{
+        width: 38px;
+    }
+
+    h4{
+        font-size: $renseignement;
+        color: $bleuPolice;
+    }
+}
+
+
+// bouton téléphone
+.aDecouvir{
+    margin-right: 70px;
+}
+
+.tel{
+    background-color: $bleuFonceBouton;
+    color: $blanc;
+    font-size: $bouton;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../img/telephone.svg");  //--- Couleur modifié directement dans le fichier SVG
+    background-size: 10%;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    height: 60px;
+    width: 247px;
+
+    .numero{
+        font-size: $bouton;
+    }
+
+    .appel{
+        font-size: $sousBouton;
+    }
+}
+
+
+
+
+
+
+// bouton qui permet de voir le plan de masse
+.decouvrir{
+    width: 472px;
+    background-color: $bleuFonceBouton;
+    color: $blanc;
+    font-size: $bouton;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 48px;
+    margin-bottom: 104px;
+    
+    img{
+        width: 27px;
+    }
+}
+
+// Différent moyen de transport pour venir
+
+.acces{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.voiture{
+    width: 45%;
+    img{
+        width: 56px;
+        margin-bottom: 13px;
+    }
+
+    h5{
+        font-size: $titreAcces;
+        color: $bleuPolice;
+        margin-bottom: 35px;
+    }
+
+    p{
+        font-size: $paragrapheAcces;
+        color: $blanc;
+    }
+}
+
+.transport{
+    width: 290px;
+    img{
+        width: 38px;
+        margin-bottom: 12px;
+    }
+
+    h5{
+        font-size: $titreAcces;
+        color: $bleuPolice;
+        margin-bottom: 35px;
+    }
+
+    p{
+        font-size: $paragrapheAcces;
+        color: $blanc;
+    }
+}
+
+
+// Création du footer
+
+footer{
+    height: 117px;
+    width: 100vw;
+    background-color: $blanc;
+}
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------- RESPONSIVE --------------------------------------------------------------------------
+
+
+// creation d'un tableau qui comprend les variables de responsive
+
+$screens: (
+    mobile: 425px,
+    max-mobile: 426px,
+    tab: 768px,
+    max-tab: 769px,
+    laptop-xs: 1024px,
+    max-laptop-xs: 1025px,
+    laptop: 1440px,
+);
+
+
+// responsive pour mobile 
+@media screen and (max-width: map-get($screens, mobile)){
+
+
+    // placement des titre au centre
+    
+    .lotBouton{
+        width: 247px;
+        height: 140px;
+        left: calc((100% - 247px)/2);
+        flex-direction: column;
+    }
+
+
+    // placement du titre au centre
+
+    .boiteTitre{
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin: 0;
+
+        .titre{
+            font-size: 40px;
+            margin: 0;
+            padding: 5px 20px 5px 20px;
+        }
+    }
+
+    //placement du mail au centre
+
+    .rondTransparent{
+        left: calc((100% - 84px)/2);
+    }
+
+    // placement au center de chaque titre
+
+    .milieu{
+        height: auto;
+        justify-content: center;
+    }
+
+    .titreMilieu{
+        text-align: center;
+    }
+
+    .sousTitreMilieu{
+        padding: 25px 20px 5px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    // partie contact et access
+
+    .container{
+        height: auto;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+
+    // placement du formulaire
+
+    .containerForm{
+        width: 95vw;
+        height: auto;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .containerInput{
+        flex-direction: column;
+    }
+
+    // passage des inputs a 100% de l'écran
+
+    .firstInput, .secondInput{
+        width: 100%;
+    }
+
+    // alongement de la balise text area
+
+    textarea{
+        height: 200px;
+        resize: none;
+    }
+
+    // centrage du bouton submit
+
+    .submit{
+        margin: 30px 0 30px 0;
+    }
+
+
+    .containerAcces{
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+    .rendezVous{
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localisation{
+        margin: 50px 0px 50px 0px;
+    }
+
+    // redimentionment du bouton des plans
+
+    .aDecouvir{
+        margin: 0;
+    }
+
+    .decouvrir{
+        width: 90vw;
+        font-size: 20px;
+        margin: 0 0 50px 0;
+        padding-left: 20px;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+
+    .acces{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voiture, .transport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+
+        h5{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .transport{
+        margin: 50px 0 50px 0;
+    }
+
+    
+}
+
+// responsive pour tablette
+@media screen and (min-width: map-get($screens, max-mobile)) and (max-width: map-get($screens, tab)){
+
+
+    // placement des titre au centre
+    
+    .lotBouton{
+        width: 247px;
+        height: 140px;
+        left: calc((100% - 247px)/2);
+        flex-direction: column;
+    }
+
+
+    // placement du titre au centre
+
+    .boiteTitre{
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin: 0;
+
+        .titre{
+            font-size: 47px;
+            margin: 0;
+            padding: 5px 20px 5px 20px;
+        }
+    }
+
+    //placement du mail au centre
+
+    .rondTransparent{
+        left: calc((100% - 84px)/2);
+    }
+
+    // placement au center de chaque titre
+
+    .milieu{
+        height: auto;
+        justify-content: center;
+    }
+
+    .titreMilieu{
+        text-align: center;
+    }
+
+    .sousTitreMilieu{
+        padding: 25px 20px 5px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    // partie contact et access
+
+    .container{
+        height: auto;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+
+    // placement du formulaire
+
+    .containerForm{
+        width: 95vw;
+        height: auto;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .containerInput{
+        flex-direction: row;
+    }
+
+    // passage des inputs a 100% de l'écran
+
+    .firstInput, .secondInput{
+        width: 49%;
+    }
+
+    // alongement de la balise text area
+
+    textarea{
+        height: 200px;
+        resize: none;
+    }
+
+    // centrage du bouton submit
+
+    .submit{
+        margin: 30px 0 30px 0;
+    }
+
+
+    .containerAcces{
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+    .rendezVous{
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localisation{
+        margin: 50px 0px 50px 0px;
+    }
+
+    // redimentionment du bouton des plans
+
+    .aDecouvir{
+        margin: 0;
+    }
+
+    .decouvrir{
+        width: 98vw;
+        max-width: 472px;
+        font-size: 20px;
+        margin: 0 0 50px 0;
+        padding-left: 20px;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+
+    .acces{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .voiture, .transport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+
+        h5{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .transport{
+        margin: 50px 0 50px 0;
+    }
+
+    
+}
+//-- responsive pour tablette landscape
+
+
+// responsive pour ordinateur petit
+@media screen and (min-width: map-get($screens, max-tab)) and (max-width: map-get($screens, laptop-xs)){
+
+
+    // placement des titre au centre
+    
+    .lotBouton{
+        width: 514px;
+        height: 60px;
+        left: 30%;
+        flex-direction: row;
+    }
+
+
+    // placement du titre au centre
+
+    .boiteTitre{
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin: 0;
+
+        .titre{
+            font-size: 47px;
+            margin: 0;
+            padding: 5px 20px 5px 20px;
+        }
+    }
+
+    //placement du mail au centre
+
+    .rondTransparent{
+        left: calc((100% - 84px)/2);
+    }
+
+    // placement au center de chaque titre
+
+    .milieu{
+        height: auto;
+        justify-content: center;
+    }
+
+    .titreMilieu{
+        text-align: center;
+    }
+
+    .sousTitreMilieu{
+        padding: 0px 20px 5px 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    // partie contact et access
+
+    .container{
+        height: auto;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 50px;
+    }
+
+
+    // placement du formulaire
+
+    .containerForm{
+        width: 80vw;
+        height: auto;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .containerInput{
+        flex-direction: row;
+    }
+
+    // passage des inputs a 100% de l'écran
+
+    .firstInput, .secondInput{
+        width: 49%;
+    }
+
+    // alongement de la balise text area
+
+    textarea{
+        height: 200px;
+        resize: none;
+    }
+
+    // centrage du bouton submit
+
+    .submit{
+        margin: 30px 0 30px 0;
+    }
+
+
+    .containerAcces{
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+    .rendezVous{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localisation{
+        margin: 50px 0px 50px 0px;
+    }
+
+    // redimentionment du bouton des plans
+
+    .aDecouvir{
+        margin: 0;
+    }
+
+    .decouvrir{
+        width: 472px;
+        font-size: 20px;
+        margin: 0 0 50px 0;
+        padding-left: 20px;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+
+    .acces{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .voiture, .transport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+
+        h5{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .transport{
+        margin: 50px 0 50px 0;
+    }
+
+    
+}
+
+
+// responsive pour ordinateur moyen
+@media screen and (min-width: map-get($screens, max-laptop-xs)) and (max-width: map-get($screens, laptop)){
+
+
+    // placement des titre au centre
+    
+    .lotBouton{
+        width: 514px;
+        height: 60px;
+        left: 50%;
+        flex-direction: row;
+    }
+
+    // partie contact et access
+
+    .container{
+        height: 800px;
+        flex-direction: row;
+        width: 100vw;
+    }
+
+
+    // placement du formulaire
+
+    .containerForm{
+        width: 40vw;
+        height: auto;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    .containerInput{
+        flex-direction: row;
+    }
+
+    // passage des inputs a 100% de l'écran
+
+    .firstInput, .secondInput{
+        width: 49%;
+    }
+
+    // alongement de la balise text area
+
+    textarea{
+        height: 200px;
+        resize: none;
+    }
+
+    // centrage du bouton submit
+
+    .submit{
+        margin: 30px 0 30px 0;
+    }
+
+
+    .containerAcces{
+        width: 45vw;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+    .rendezVous{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localisation{
+        margin: 50px 0px 50px 0px;
+    }
+
+    // redimentionment du bouton des plans
+
+    .aDecouvir{
+        margin: 0;
+    }
+
+    .decouvrir{
+        width: 472px;
+        font-size: 20px;
+        margin: 0 0 50px 0;
+        padding-left: 20px;
+    }
+
+
+    // mise en place en colonne des rendez-vous
+
+
+    .acces{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .voiture, .transport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+
+        h5{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .transport{
+        margin: 50px 0 50px 0;
+    }
+
+    
+}
+
+
+
+
+// me permet de voir les erreurs de responsive comme pouquoi l'écran s'équarte
+
+
+// *{
+//     border: 1px solid red;
+// }
